@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import preload from "./data.json";
 import ShowCard from "./ShowCard";
 
@@ -35,7 +34,6 @@ class Search extends React.Component {
             )
             .map(show => <ShowCard key={show.imdbID} show={show} />)}
         </div>
-        <Link to="/">Back to Landing</Link>
       </div>
     );
   }
