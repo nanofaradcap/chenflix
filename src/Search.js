@@ -1,13 +1,25 @@
-import React from "react";
-import preload from "./data.json";
+import React, { Component } from "react";
 import ShowCard from "./ShowCard";
+import Header from "./Header";
 
-class Search extends React.Component {
+class Search extends Component {
   constructor(props) {
     super(props);
     this.state = { searchTerm: "" };
     this.handleSearchTermChange = this.handleSearchTermChange.bind(this);
   }
+
+  // //lifecycle methods
+  // //after it's rendered to the DOM
+  // componentDidMount() {
+  //   //can access window
+  //   //do library integration here i.e. d3
+  // }
+
+  // //cleanup
+  // componentWillUnmount() {
+
+  // }
 
   handleSearchTermChange(event) {
     this.setState({ searchTerm: event.target.value });
@@ -17,15 +29,14 @@ class Search extends React.Component {
       <div className="search">
         <header>
           <h1>chenflix</h1>
-          <input
-            onChange={this.handleSearchTermChange}
-            type="text"
-            value={this.state.searchTerm}
-            placeholder="Search"
+          <Header
+            searchTerm={this.state.searchTerm}
+            showSearch
+            handleSearchTermChange={this.handleSearchTermChange}
           />
         </header>
         <div>
-          {preload.shows
+          {this.props.shows
             .filter(
               show =>
                 `${show.title} ${show.description}`
@@ -40,5 +51,3 @@ class Search extends React.Component {
 }
 
 export default Search;
-
-/*JSON.stringify(preload, null, 4)*/
