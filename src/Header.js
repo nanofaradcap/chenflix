@@ -31,7 +31,7 @@ const Header = props => {
 
 Header.defaultProps = {
   showSearch: false,
-  searchTerm: '',
+  searchTerm: "",
   handleSearchTermChange: function noop() {}
 };
 

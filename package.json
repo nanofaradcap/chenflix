@@ -3,8 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "0.16.1",
+    "cors": "2.8.3",
     "enzyme": "^3.1.0",
     "enzyme-to-json": "^3.1.4",
+    "express": "4.15.3",
     "flow-bin": "0.57.3",
     "jest": "^21.2.1",
     "react": "^16.0.0",
@@ -15,6 +18,7 @@
     "styled-components": "^2.2.1"
   },
   "scripts": {
+    "api": "node src/ratingsAPI.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom --setupTestFrameworkScriptFile=raf/polyfill",

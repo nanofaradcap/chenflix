@@ -18,7 +18,6 @@ class Search extends Component {
 
   // //cleanup
   // componentWillUnmount() {
-
   // }
 
   handleSearchTermChange(event) {

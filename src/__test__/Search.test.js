@@ -10,7 +10,7 @@ Enzyme.configure({ adapter: new Adapter() });
 
 test("Search renders correctly", () => {
   //alternative: const component = renderer.create(<Search />);
-  const component = Enzyme.shallow(<Search />);
+  const component = Enzyme.shallow(<Search />); //enzyme component - stub that just tests each component and no children
   expect(component).toMatchSnapshot();
 });
 
